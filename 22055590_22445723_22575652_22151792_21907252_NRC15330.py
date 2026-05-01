@@ -47,4 +47,13 @@ while True:
                 linea = linea + str(matriz[i][j]) + "     "
             print(linea)
         print("**"*18)
-
+     elif=="2":
+         #Se deve cumplir primero la opcion anterior para tener de los datos de deptos, meses y matriz.
+         if len(matriz)==0:
+             print("Se necesita rellenar la opción 1.")
+             continue
+#Ahora le entregamos un valor a la variable de valor_m3
+    valor_m3=float(input("Ingrese cantidad de m³ consumidos este mes:"))
+#ciclos de for para recorrer los departamentos y los meses
+    for i in range (deptos):
+        print("Departamento"+ (1+))
