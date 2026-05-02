@@ -53,7 +53,30 @@ while True:
              print("Se necesita rellenar la opción 1.")
              continue
 #Ahora le entregamos un valor a la variable de valor_m3
-    valor_m3=float(input("Ingrese cantidad de m³ consumidos este mes:"))
-#ciclos de for para recorrer los departamentos y los meses
-    for i in range (deptos):
-        print("Departamento"+ (1+))
+        valor_m3=float(input("Ingrese valor de los m³:")) 
+ #ciclos de for para recorrer los departamentos y los meses   
+        for i in range (deptos):
+            print("Departamento"+ str(i+1))
+            for j in range (meses):
+#Se deve saber que el usuario esta entregando datos correctos
+                while True:
+                    men=float(input("Ingrese cantidad de m³ consumidos en el mes"+ str(j+1)+":"))
+                    if men>=5 and men<=50:
+                        matriz[i][j]=men
+                        break
+                else:
+                    print("Error, la cantidad debe ser entre 5 y 50, inclusive.")
+#En caso de ser datos que no estan entre 5 y 50, el programa mostrara un error y pedira nuevamente datos, que deve guardar en la matriz
+#Esto logra imprimir los datos del departamento imprimiendo una fila completa 
+        print("\nPlan de consumo")
+        print("**"*18)
+        encabezado="                         "
+        for m in range(meses):
+            enc=encabezado+str(m+1)
+        print(enc)
+        for i in range(deptos):
+            linea="departamento"+str(i+1)+"    "
+            for j in range (meses)
+                linea=line+str (matriz[i][j])+"     "
+            print(linea)
+         print("**"*18)
